@@ -22,7 +22,6 @@ export default app;
 
 app.get("/items", async (c) => {
   try {
-    rerere;
     // D1 から全てのアイテムを取得
     const { results } = await c.env.DB.prepare("SELECT * FROM items").all();
     return c.json(results); // 取得したデータをJSONで返す
